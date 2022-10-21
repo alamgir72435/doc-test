@@ -14,7 +14,9 @@ services:
       replicas: 10
     environment:
       PLATEFORM: docker
-      REDIS_HOST: http://redis
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+
   frontend:
     image: doc-test_frontend
     build: 
@@ -24,3 +26,4 @@ services:
       - 3000:3000
   redis:
     image: redis
+    command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
