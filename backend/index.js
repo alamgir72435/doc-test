@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv"
+import redis from 'redis'
 
 dotenv.config();
 console.log(process.env.PLATEFORM);
@@ -8,7 +9,7 @@ const app = express();
 
 // Redis Connection
 
-const redis = require('redis');
+
 const redisClient = redis.createClient(6379,'redis');
 
 redisClient.connect().then(() => {
