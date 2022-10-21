@@ -6,6 +6,22 @@ console.log(process.env.PLATEFORM);
 
 const app = express();
 
+// Redis Connection
+
+const redis = require('redis');
+const redisClient = redis.createClient(6379,'redis');
+
+redisClient.connect().then(() => {
+  console.log('Redis Connected');
+}).catch(err => {
+  console.log('Failed to Connect with Redis')
+})
+
+// Redis
+
+
+
+
 
 
 // Middleware
