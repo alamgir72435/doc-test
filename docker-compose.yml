@@ -4,7 +4,10 @@ version: "3"
 
 services:
   backend:
-    build: ./backend
+    image: doc-test_backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     ports:
       - 5000:5000
     deploy:
@@ -12,6 +15,9 @@ services:
     environment:
       PLATEFORM: docker
   frontend:
-    build: ./frontend
+    image: doc-test_frontend
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
