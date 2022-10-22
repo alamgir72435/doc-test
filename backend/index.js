@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended:false }))
 
 // Variables
-const PORT = 5000;
+const PORT = 5454;
 
 // Prefix
 const prefix = '/test'
