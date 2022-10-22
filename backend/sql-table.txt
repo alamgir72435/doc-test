@@ -1,0 +1,4 @@
+CREATE TABLE `test`.`todos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `todo` VARCHAR(45) NULL,
+  `isCompleted` VARCHAR(10) NULL);
